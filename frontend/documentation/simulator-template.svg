@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+    
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="24" fill="#1976d2" font-weight="bold">
+        Simulator Interface Layout
+    </text>
+    
+    <!-- Connection Panel -->
+    <rect x="50" y="80" width="200" height="100" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="150" y="135" text-anchor="middle" font-size="16">Connection Status</text>
+    
+    <!-- Scenario Selection -->
+    <rect x="270" y="80" width="200" height="100" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="370" y="135" text-anchor="middle" font-size="16">Scenario Selection</text>
+    
+    <!-- Environment Controls -->
+    <rect x="490" y="80" width="260" height="100" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="620" y="135" text-anchor="middle" font-size="16">Environment Controls</text>
+    
+    <!-- Main Simulation Area -->
+    <rect x="50" y="200" width="700" height="300" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="400" y="350" text-anchor="middle" font-size="16">Simulation View</text>
+    
+    <!-- Robot Management -->
+    <rect x="50" y="520" width="300" height="60" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="200" y="555" text-anchor="middle" font-size="16">Robot Management Panel</text>
+    
+    <!-- Metrics Display -->
+    <rect x="370" y="520" width="380" height="60" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="560" y="555" text-anchor="middle" font-size="16">Simulation Metrics</text>
+</svg> 

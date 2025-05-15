@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Patrol Platform Documentation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #1976d2;
+        --secondary-color: #9c27b0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .navbar {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        padding: 1rem 0;
+      }
+
+      .navbar-brand {
+        color: white !important;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: white !important;
+      }
+
+      .section {
+        padding: 4rem 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .section-title {
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        font-weight: bold;
+      }
+
+      .component-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 2rem;
+      }
+
+      .component-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .component-card .card-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        border-radius: 10px 10px 0 0 !important;
+      }
+
+      .diagram-container {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 10px;
+        margin: 2rem 0;
+      }
+
+      .diagram {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+      }
+
+      .template-preview {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 1rem;
+        margin: 1rem 0;
+        background: white;
+      }
+
+      .color-palette {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .color-box {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      .primary-color {
+        background-color: var(--primary-color);
+      }
+
+      .secondary-color {
+        background-color: var(--secondary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-robot me-2"></i>
+          Robot Patrol Platform Documentation
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#component-style">Component Style</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#storyboard">Storyboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#function-tree">Function Tree</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ui-markup">UI Markup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#templates">Templates</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Component GUI Style -->
+    <section id="component-style" class="section">
+      <div class="container">
+        <h2 class="section-title">Component GUI Style</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">Color Palette</h3>
+              </div>
+              <div class="card-body">
+                <div class="color-palette">
+                  <div class="color-box primary-color">Primary</div>
+                  <div class="color-box secondary-color">Secondary</div>
+                </div>
+                <h4>Typography</h4>
+                <ul>
+                  <li>
+                    Font Family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
+                  </li>
+                  <li>Base Font Size: 16px</li>
+                  <li>Line Height: 1.6</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">Component Guidelines</h3>
+              </div>
+              <div class="card-body">
+                <h4>Common Components</h4>
+                <ul>
+                  <li>
+                    Buttons: Material-UI Button component with gradient
+                    background
+                  </li>
+                  <li>
+                    Cards: Elevated cards with rounded corners and subtle
+                    shadows
+                  </li>
+                  <li>Forms: Material-UI TextField with consistent styling</li>
+                  <li>Tables: Material-UI Table with striped rows</li>
+                  <li>Modals: Centered modals with backdrop blur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Storyboard -->
+    <section id="storyboard" class="section">
+      <div class="container">
+        <h2 class="section-title">Storyboard</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">User Flow</h3>
+              </div>
+              <div class="card-body">
+                <div class="diagram-container">
+                  <img
+                    src="storyboard.svg"
+                    alt="Storyboard Diagram"
+                    class="diagram"
+                  />
+                </div>
+                <div class="mt-4">
+                  <h4>Key User Flows</h4>
+                  <ol>
+                    <li>
+                      Authentication Flow
+                      <ul>
+                        <li>Login Page → Dashboard</li>
+                        <li>Protected Routes → Login Redirect</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Robot Management Flow
+                      <ul>
+                        <li>Dashboard → Robot List → Robot Details</li>
+                        <li>Robot Details → Control Panel</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Simulator Flow
+                      <ul>
+                        <li>Simulator Page → Connect → Load Scenario</li>
+                        <li>Scenario → Spawn Robots → Monitor</li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Function Partition Tree -->
+    <section id="function-tree" class="section">
+      <div class="container">
+        <h2 class="section-title">Function Partition Tree</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">System Functions</h3>
+              </div>
+              <div class="card-body">
+                <div class="diagram-container">
+                  <img
+                    src="function-tree.svg"
+                    alt="Function Partition Tree"
+                    class="diagram"
+                  />
+                </div>
+                <div class="mt-4">
+                  <h4>Main Function Categories</h4>
+                  <ul>
+                    <li>
+                      Authentication
+                      <ul>
+                        <li>Login</li>
+                        <li>Logout</li>
+                        <li>Session Management</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Robot Management
+                      <ul>
+                        <li>Robot Control</li>
+                        <li>Status Monitoring</li>
+                        <li>Configuration</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Simulator
+                      <ul>
+                        <li>Connection Management</li>
+                        <li>Scenario Control</li>
+                        <li>Environment Settings</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI Markup Diagram -->
+    <section id="ui-markup" class="section">
+      <div class="container">
+        <h2 class="section-title">UI Markup Diagram</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">Component Hierarchy</h3>
+              </div>
+              <div class="card-body">
+                <div class="diagram-container">
+                  <img
+                    src="ui-markup.svg"
+                    alt="UI Markup Diagram"
+                    class="diagram"
+                  />
+                </div>
+                <div class="mt-4">
+                  <h4>Component Structure</h4>
+                  <pre class="bg-light p-3 rounded">
+App
+├── Layout
+│   ├── Sidebar
+│   └── Header
+├── Pages
+│   ├── LoginPage
+│   ├── DashboardPage
+│   ├── RobotPage
+│   ├── SimulatorPage
+│   └── SettingsPage
+└── Components
+    ├── Common
+    │   ├── ModalManager
+    │   └── LoadingSpinner
+    └── Modals
+        ├── RobotDetailsModal
+        └── SimulatorRobotModal
+                                </pre
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUI Templates -->
+    <section id="templates" class="section">
+      <div class="container">
+        <h2 class="section-title">GUI Templates</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">Dashboard Template</h3>
+              </div>
+              <div class="card-body">
+                <div class="template-preview">
+                  <img
+                    src="dashboard-template.svg"
+                    alt="Dashboard Template"
+                    class="diagram"
+                  />
+                </div>
+                <h4>Layout Components</h4>
+                <ul>
+                  <li>Header with user info and notifications</li>
+                  <li>Sidebar navigation</li>
+                  <li>Main content area with grid layout</li>
+                  <li>Status cards and metrics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="component-card card">
+              <div class="card-header">
+                <h3 class="mb-0">Simulator Template</h3>
+              </div>
+              <div class="card-body">
+                <div class="template-preview">
+                  <img
+                    src="simulator-template.svg"
+                    alt="Simulator Template"
+                    class="diagram"
+                  />
+                </div>
+                <h4>Layout Components</h4>
+                <ul>
+                  <li>Connection status panel</li>
+                  <li>Scenario selection</li>
+                  <li>Environment controls</li>
+                  <li>Robot management panel</li>
+                  <li>Metrics display</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

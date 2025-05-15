@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+    
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="24" fill="#1976d2" font-weight="bold">
+        Function Partition Tree
+    </text>
+    
+    <!-- Root Node -->
+    <rect x="350" y="80" width="200" height="60" rx="10" fill="#1976d2" opacity="0.1"/>
+    <text x="450" y="115" text-anchor="middle" font-size="18">Robot Patrol System</text>
+    
+    <!-- First Level -->
+    <rect x="100" y="200" width="150" height="50" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="175" y="230" text-anchor="middle" font-size="16">Authentication</text>
+    
+    <rect x="325" y="200" width="150" height="50" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="400" y="230" text-anchor="middle" font-size="16">Robot Management</text>
+    
+    <rect x="550" y="200" width="150" height="50" rx="8" fill="#1976d2" opacity="0.1"/>
+    <text x="625" y="230" text-anchor="middle" font-size="16">Simulator</text>
+    
+    <!-- Lines to First Level -->
+    <path d="M 450 140 L 175 200" stroke="#1976d2" stroke-width="2" fill="none"/>
+    <path d="M 450 140 L 400 200" stroke="#1976d2" stroke-width="2" fill="none"/>
+    <path d="M 450 140 L 625 200" stroke="#1976d2" stroke-width="2" fill="none"/>
+    
+    <!-- Second Level - Authentication -->
+    <rect x="50" y="300" width="100" height="40" rx="6" fill="#1976d2" opacity="0.1"/>
+    <text x="100" y="325" text-anchor="middle" font-size="14">Login</text>
+    
+    <rect x="200" y="300" width="100" height="40" rx="6" fill="#1976d2" opacity="0.1"/>
+    <text x="250" y="325" text-anchor="middle" font-size="14">Logout</text>
+    
+    <!-- Lines to Authentication -->
+    <path d="M 175 250 L 100 300" stroke="#1976d2" stroke-width="2" fill="none"/>
+    <path d="M 175 250 L 250 300" stroke="#1976d2" stroke-width="2" fill="none"/>
+    
+    <!-- Second Level - Robot Management -->
+    <rect x="275" y="300" width="100" height="40" rx="6" fill="#1976d2" opacity="0.1"/>
+    <text x="325" y="325" text-anchor="middle" font-size="14">Control</text>
+    
+    <rect x="425" y="300" width="100" height="40" rx="6" fill="#1976d2" opacity="0.1"/>
+    <text x="475" y="325" text-anchor="middle" font-size="14">Monitor</text>
+    
+    <!-- Lines to Robot Management -->
+    <path d="M 400 250 L 325 300" stroke="#1976d2" stroke-width="2" fill="none"/>
+    <path d="M 400 250 L 475 300" stroke="#1976d2" stroke-width="2" fill="none"/>
+    
+    <!-- Second Level - Simulator -->
+    <rect x="500" y="300" width="100" height="40" rx="6" fill="#1976d2" opacity="0.1"/>
+    <text x="550" y="325" text-anchor="middle" font-size="14">Connect</text>
+    
+    <rect x="650" y="300" width="100" height="40" rx="6" fill="#1976d2" opacity="0.1"/>
+    <text x="700" y="325" text-anchor="middle" font-size="14">Control</text>
+    
+    <!-- Lines to Simulator -->
+    <path d="M 625 250 L 550 300" stroke="#1976d2" stroke-width="2" fill="none"/>
+    <path d="M 625 250 L 700 300" stroke="#1976d2" stroke-width="2" fill="none"/>
+</svg> 

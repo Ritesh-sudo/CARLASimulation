@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+    
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="24" fill="#1976d2" font-weight="bold">
+        User Flow Diagram
+    </text>
+    
+    <!-- Login Box -->
+    <rect x="50" y="100" width="150" height="80" rx="10" fill="#1976d2" opacity="0.1"/>
+    <text x="125" y="145" text-anchor="middle" font-size="16">Login</text>
+    
+    <!-- Dashboard Box -->
+    <rect x="300" y="100" width="150" height="80" rx="10" fill="#1976d2" opacity="0.1"/>
+    <text x="375" y="145" text-anchor="middle" font-size="16">Dashboard</text>
+    
+    <!-- Robot List Box -->
+    <rect x="550" y="100" width="150" height="80" rx="10" fill="#1976d2" opacity="0.1"/>
+    <text x="625" y="145" text-anchor="middle" font-size="16">Robot List</text>
+    
+    <!-- Arrows -->
+    <path d="M 200 140 L 300 140" stroke="#1976d2" stroke-width="2" fill="none"/>
+    <path d="M 450 140 L 550 140" stroke="#1976d2" stroke-width="2" fill="none"/>
+    
+    <!-- Arrow Heads -->
+    <path d="M 290 140 L 300 130 L 310 140" fill="#1976d2"/>
+    <path d="M 540 140 L 550 130 L 560 140" fill="#1976d2"/>
+    
+    <!-- Simulator Flow -->
+    <rect x="50" y="250" width="150" height="80" rx="10" fill="#9c27b0" opacity="0.1"/>
+    <text x="125" y="295" text-anchor="middle" font-size="16">Simulator</text>
+    
+    <rect x="300" y="250" width="150" height="80" rx="10" fill="#9c27b0" opacity="0.1"/>
+    <text x="375" y="295" text-anchor="middle" font-size="16">Connect</text>
+    
+    <rect x="550" y="250" width="150" height="80" rx="10" fill="#9c27b0" opacity="0.1"/>
+    <text x="625" y="295" text-anchor="middle" font-size="16">Monitor</text>
+    
+    <!-- Arrows for Simulator Flow -->
+    <path d="M 200 290 L 300 290" stroke="#9c27b0" stroke-width="2" fill="none"/>
+    <path d="M 450 290 L 550 290" stroke="#9c27b0" stroke-width="2" fill="none"/>
+    
+    <!-- Arrow Heads for Simulator Flow -->
+    <path d="M 290 290 L 300 280 L 310 290" fill="#9c27b0"/>
+    <path d="M 540 290 L 550 280 L 560 290" fill="#9c27b0"/>
+</svg> 
