@@ -1,175 +1,170 @@
-# Security Bot Project
+# Security Bot v1
 
-A brief description of the Security Bot project, explaining its purpose and goals. (e.g., A system for monitoring and managing security robots via a web interface and API).
+A comprehensive security monitoring and patrol system with both frontend and backend components.
 
-## Features
+## Screenshots
 
-- List key features of the application.
-- e.g., Real-time robot status monitoring.
-- e.g., Robot mission control (start/stop).
-- e.g., User authentication and authorization.
-- e.g., Data visualization (if applicable).
-- e.g., Simulation capabilities.
+### Dashboard
+![Dashboard](/documentation/screenshots/dashboard.png)
+*Main dashboard showing real-time security metrics and robot status*
 
-## Tech Stack
+### Robot Control Interface
+![Robot Control](/documentation/screenshots/robot-control.png)
+*Interface for controlling and monitoring security robots*
 
-- **Backend:** Python, FastAPI
-- **Frontend:** JavaScript, React, Material UI
-- **Databases:**
-  - MySQL (for primary application data)
-  - MongoDB (for simulation data or logs)
-- **Authentication:** JWT (JSON Web Tokens)
-- **Environment Management:** Python Virtual Environment (`venv`), Node Package Manager (`npm` or `yarn`)
+### Security Alerts
+![Security Alerts](/documentation/screenshots/alerts.png)
+*Real-time security alerts and incident reporting*
+
+### User Management
+![User Management](/documentation/screenshots/user-management.png)
+*User and role management interface*
+
+### Analytics Dashboard
+![Analytics](/documentation/screenshots/analytics.png)
+*Security analytics and reporting dashboard*
+
+### Settings
+![Settings](/documentation/screenshots/settings.png)
+*System configuration and settings*
 
 ## Project Structure
 
 ```
-security-bot/
-├── .env                     # Backend environment variables
-│   ├── DB_USERNAME
-│   ├── DB_PASSWORD
-│   ├── DB_HOST
-│   ├── DB_PORT
-│   ├── DB_NAME
-│   ├── SECRET_KEY
-│   ├── ACCESS_TOKEN_EXPIRE_MINUTES
-│   ├── ALGORITHM
-│   ├── MONGODB_USERNAME
-│   ├── MONGODB_PASSWORD
-│   ├── MONGODB_CLUSTER
-│   ├── MONGODB_DATABASE
-│   └── MONGODB_COLLECTION
-│
-├── frontend/
-│   ├── .env                # Frontend environment variables
-│   │   ├── MONGODB_URI
-│   │   ├── MONGODB_DATABASE
-│   │   ├── MONGODB_COLLECTION
-│   │   ├── SERVER_PORT
-│   │   ├── REACT_APP_API_URL
-│   │   └── REACT_APP_VNC_URL
-│   │
-│   ├── node_modules/       # Node.js dependencies (gitignored)
-│   ├── public/            # Static files
-│   ├── src/              # React source code
-│   ├── package.json      # Node.js dependencies manifest
-│   └── server.js         # Node.js server for MongoDB
-│
-├── routes/               # FastAPI backend
-│   ├── __init__.py
-│   ├── main.py          # FastAPI entry point
-│   ├── models/          # Database models
-│   ├── routers/         # API routes
-│   ├── schemas/         # Pydantic schemas
-│   ├── crud/           # Database operations
-│   └── utils/          # Helper functions
-│
-├── botvenv/            # Python virtual environment (gitignored)
-├── requirements.txt    # Python dependencies
-├── .gitignore         # Git ignore rules
-└── README.md          # Project documentation
+├── frontend/           # React frontend application
+├── robot-patrol/       # Robot patrol system components
+├── routes/            # Backend API routes
+├── tests/            # Test suites
+└── botvenv/          # Python virtual environment
 ```
 
-## Setup and Installation
+## Tech Stack
+
+### Backend
+- **FastAPI** - Modern, fast web framework for building APIs with Python
+- **MongoDB** - NoSQL database for data storage
+- **SQLAlchemy** - SQL toolkit and ORM
+- **PyJWT** - JSON Web Token implementation
+- **Uvicorn** - Lightning-fast ASGI server
+- **Motor** - Async MongoDB driver
+
+### Frontend
+- **Express.js** - Web application framework
+- **MongoDB Node.js Driver** - Database connectivity
+- **dotenv** - Environment variable management
+
+## Development Setup
 
 ### Prerequisites
-
 - Python 3.8+
-- Node.js 14+ and npm/yarn
-- MySQL Server
-- MongoDB (Atlas or local instance)
-- Git
+- Node.js 16+
+- MongoDB
+- pip (Python package manager)
+- npm (Node.js package manager)
 
-### 1. Clone the Repository
+### Backend Setup
 
+1. Create and activate virtual environment:
+   ```bash
+   python -m venv botvenv
+   source botvenv/bin/activate  # On Unix/macOS
+   # or
+   .\botvenv\Scripts\activate  # On Windows
+   ```
+
+2. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root directory with:
+   ```
+   DATABASE_URL=your_mongodb_url
+   JWT_SECRET=your_jwt_secret
+   ```
+
+### Frontend Setup
+
+1. Navigate to frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install Node.js dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create frontend environment variables:
+   Create a `.env` file in the frontend directory with necessary configurations.
+
+## Running the Application
+
+### Backend
 ```bash
-git clone <your-repository-url>
-cd security-bot
+uvicorn main:app --reload
 ```
 
-### 2. Backend Setup (FastAPI)
-
+### Frontend
 ```bash
-# Create and activate a Python virtual environment
-python3 -m venv botvenv
-source botvenv/bin/activate  # On Windows use `botvenv\Scripts\activate`
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Configure Backend Environment Variables
-# Copy/rename .env.example to .env (if you have an example file)
-# Or create .env in the project root directory
-cp .env.example .env # If applicable
-# Edit .env and fill in your database credentials, secret key, etc.
-# Example .env content:
-# DB_USERNAME=your_mysql_user
-# DB_PASSWORD=your_mysql_password
-# DB_HOST=127.0.0.1
-# DB_PORT=3306
-# DB_NAME=security-bot
-# SECRET_KEY=your_strong_secret_key
-# ALGORITHM=HS256
-# ACCESS_TOKEN_EXPIRE_MINUTES=30
-# MONGODB_USERNAME=your_mongo_user # If backend uses MongoDB
-# MONGODB_PASSWORD=your_mongo_password
-# MONGODB_CLUSTER=your_mongo_cluster
-# MONGODB_DATABASE=your_mongo_db
-# MONGODB_COLLECTION=your_mongo_collection
-
-# Create database tables (if using SQLAlchemy models)
-# The application might do this on startup, or you might need a separate script.
-# Check routes/main.py or database setup logic.
-
-# Run the FastAPI development server
-uvicorn routes.main:app --reload --port 8000
-```
-
-### 3. Frontend Setup (React)
-
-```bash
-# Navigate to the frontend directory
 cd frontend
-
-# Install Node.js dependencies
-npm install  # or yarn install
-
-# Configure Frontend Environment Variables
-# Copy/rename .env.example to .env (if you have an example file)
-# Or create .env in the frontend directory
-cp .env.example .env # If applicable
-# Edit .env and fill in your API URL, VNC URL, MongoDB URI etc.
-# Example .env content:
-# REACT_APP_API_URL=http://localhost:8000
-# REACT_APP_VNC_URL=http://localhost:6080 # If applicable
-# MONGODB_URI=mongodb+srv://... # If server.js uses MongoDB
-# SERVER_PORT=3001 # If running server.js
-
-# Start the React development server
-npm start  # or yarn start
-
-# If using the frontend/server.js for specific tasks:
-# node server.js # Run this in a separate terminal 
+npm start
 ```
 
-## Usage
+## Development Guidelines
 
-1.  Ensure the backend server is running (usually on `http://localhost:8000`).
-2.  Ensure the frontend development server is running (usually on `http://localhost:3000`).
-3.  Open your web browser and navigate to `http://localhost:3000`.
-4.  Log in or register to use the application features.
+### Code Style
+- Follow PEP 8 guidelines for Python code
+- Use ESLint configuration for JavaScript/Node.js code
+- Maintain consistent documentation in code
 
-### API Documentation
+### Git Workflow
+1. Create feature branches from `main`
+2. Use meaningful commit messages
+3. Submit pull requests for review
+4. Merge only after passing tests and review
 
-The FastAPI backend provides automatic interactive API documentation. Once the backend server is running, you can access it at:
+### Testing
+- Write unit tests for new features
+- Ensure test coverage for critical components
+- Run tests before committing:
+  ```bash
+  python -m pytest tests/
+  ```
 
-- **Swagger UI:** `http://localhost:8000/docs`
-- **ReDoc:** `http://localhost:8000/redoc`
+## API Documentation
+- FastAPI automatic documentation available at `/docs` endpoint
+- Swagger UI available at `/redoc` endpoint
 
-## Configuration
+## Security Considerations
+- All environment variables should be properly secured
+- API endpoints are protected with JWT authentication
+- Database credentials must never be committed to version control
+- Regular security audits are recommended
 
-Environment variables are used for configuration.
+## Troubleshooting
 
-- **Backend:** Managed via the `.env` file in the project root. See `routes/config.py` (or similar) for details on variables used.
-- **Frontend:** Managed via the `.env` file in the `frontend` directory. Variables prefixed with `REACT_APP_` are accessible in the React code. The `server.js` file (if used) also reads variables from this file.
+### Common Issues
+1. **Virtual Environment Issues**
+   - Ensure `botvenv` is activated
+   - Verify Python version compatibility
+
+2. **Database Connection**
+   - Check MongoDB service is running
+   - Verify connection string in `.env`
+
+3. **Node Modules**
+   - Clear `node_modules` and reinstall if needed
+   - Check for compatible package versions
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+This project is proprietary and confidential.
 
