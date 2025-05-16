@@ -2,7 +2,7 @@
 
 A comprehensive security monitoring and patrol system with both frontend and backend components.
 
-## Screenshots
+## Dahboard View
 
 ### Robot Management Interface
 ![Robot Management](frontend/documentation/robot-management.png)
