@@ -9,7 +9,7 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 *Comprehensive robot fleet management dashboard showing multiple PatrolBots and SentryBots with their status, battery levels, and online/offline status. Each robot card displays crucial information including version, organization ID, creation time, and last update.*
 
 ### Robot Details & Status
-![Robot Details](/frontend/documentation/screenshots/robot-details.png)
+![Robot Details](frontend/documentation/robot-details.png)
 *Detailed robot status panel showing:*
 - Battery Level (95.5%)
 - Current Location (37.335400, -121.884900)
@@ -17,7 +17,7 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 - Status ID and other vital statistics
 
 ### Robot Schedule Management
-![Robot Schedule](/frontend/documentation/screenshots/robot-schedule.png)
+![Robot Schedule](frontend/documentation/robot-schedule.png)
 *Robot scheduling interface displaying multiple active patrol schedules with:*
 - Daily and weekend patrol times
 - Schedule activation status
@@ -25,7 +25,7 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 - Frequency settings (daily/weekends)
 
 ### Fleet Map View
-![Fleet Map](/frontend/documentation/screenshots/fleet-map.png)
+![Fleet Map](frontend/documentation/fleet-map.png)
 *Interactive map interface showing:*
 - Real-time robot locations across San Jose
 - Active robot status and battery levels
@@ -33,7 +33,7 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 - Interactive markers with robot details on hover
 
 ### Patrol Routes Management
-![Patrol Routes](/frontend/documentation/screenshots/patrol-routes.png)
+![Patrol Routes](frontend/documentation/patrol-routes.png)
 *Comprehensive route management system featuring:*
 - Route listings with names and descriptions
 - Waypoint counts for each route
@@ -42,14 +42,14 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 - Detailed route information including key landmarks
 
 ### Login Interface
-![Login Interface](/frontend/documentation/screenshots/login.png)
+![Login Interface](frontend/documentation/login.png)
 *Secure login portal with:*
 - Email and password authentication
 - Clean, modern interface design
 - Secure access to the robot patrol system
 
 ### Dashboard
-![Dashboard](/documentation/screenshots/dashboard.png)
+![Dashboard](frontend/documentation/dashboard.png)
 *Main dashboard showing real-time security metrics and robot status*
 
 ### Robot Control Interface
