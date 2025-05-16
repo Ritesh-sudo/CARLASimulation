@@ -4,6 +4,50 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 
 ## Screenshots
 
+### Robot Management Interface
+![Robot Management](/frontend/documentation/screenshots/robot-management.png)
+*Comprehensive robot fleet management dashboard showing multiple PatrolBots and SentryBots with their status, battery levels, and online/offline status. Each robot card displays crucial information including version, organization ID, creation time, and last update.*
+
+### Robot Details & Status
+![Robot Details](/frontend/documentation/screenshots/robot-details.png)
+*Detailed robot status panel showing:*
+- Battery Level (95.5%)
+- Current Location (37.335400, -121.884900)
+- Status Message (Patrolling Sector Alpha near King Library)
+- Status ID and other vital statistics
+
+### Robot Schedule Management
+![Robot Schedule](/frontend/documentation/screenshots/robot-schedule.png)
+*Robot scheduling interface displaying multiple active patrol schedules with:*
+- Daily and weekend patrol times
+- Schedule activation status
+- Time ranges for different patrol shifts
+- Frequency settings (daily/weekends)
+
+### Fleet Map View
+![Fleet Map](/frontend/documentation/screenshots/fleet-map.png)
+*Interactive map interface showing:*
+- Real-time robot locations across San Jose
+- Active robot status and battery levels
+- Patrol areas including City Hall, SAP Center, and San Pedro Square
+- Interactive markers with robot details on hover
+
+### Patrol Routes Management
+![Patrol Routes](/frontend/documentation/screenshots/patrol-routes.png)
+*Comprehensive route management system featuring:*
+- Route listings with names and descriptions
+- Waypoint counts for each route
+- Creation timestamps
+- Route preview map with start/end points
+- Detailed route information including key landmarks
+
+### Login Interface
+![Login Interface](/frontend/documentation/screenshots/login.png)
+*Secure login portal with:*
+- Email and password authentication
+- Clean, modern interface design
+- Secure access to the robot patrol system
+
 ### Dashboard
 ![Dashboard](/documentation/screenshots/dashboard.png)
 *Main dashboard showing real-time security metrics and robot status*
