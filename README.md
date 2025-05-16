@@ -52,26 +52,6 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 ![Dashboard](frontend/documentation/dashboard.png)
 *Main dashboard showing real-time security metrics and robot status*
 
-### Robot Control Interface
-![Robot Control](/documentation/screenshots/robot-control.png)
-*Interface for controlling and monitoring security robots*
-
-### Security Alerts
-![Security Alerts](/documentation/screenshots/alerts.png)
-*Real-time security alerts and incident reporting*
-
-### User Management
-![User Management](/documentation/screenshots/user-management.png)
-*User and role management interface*
-
-### Analytics Dashboard
-![Analytics](/documentation/screenshots/analytics.png)
-*Security analytics and reporting dashboard*
-
-### Settings
-![Settings](/documentation/screenshots/settings.png)
-*System configuration and settings*
-
 ## Project Structure
 
 ```
