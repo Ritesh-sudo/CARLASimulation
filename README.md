@@ -55,11 +55,11 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 ## Project Structure
 
 ```
-├── frontend/           # React frontend application
-├── robot-patrol/       # Robot patrol system components
-├── routes/            # Backend API routes
-├── tests/            # Test suites
-└── botvenv/          # Python virtual environment
+├── frontend/           
+├── robot-patrol/       
+├── routes/            
+├── tests/            
+└── botvenv/          
 ```
 
 ## Tech Stack
