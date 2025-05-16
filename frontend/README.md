@@ -56,7 +56,3 @@ Create a `.env` file in the root directory with the following variables:
 REACT_APP_API_URL=https://your-backend-api.com/api
 REACT_APP_SOCKET_URL=https://your-backend-api.com
 ```
-
-## License
-
-[MIT](LICENSE)
