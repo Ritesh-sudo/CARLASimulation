@@ -5,7 +5,7 @@ A comprehensive security monitoring and patrol system with both frontend and bac
 ## Screenshots
 
 ### Robot Management Interface
-![Robot Management](/frontend/documentation/screenshots/robot-management.png)
+![Robot Management](/CARLASimulation/frontend/documentation/screenshots/robot-management.png)
 *Comprehensive robot fleet management dashboard showing multiple PatrolBots and SentryBots with their status, battery levels, and online/offline status. Each robot card displays crucial information including version, organization ID, creation time, and last update.*
 
 ### Robot Details & Status
