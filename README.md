@@ -1,5 +1,5 @@
 # Security Bot v1
-
+![Security Bot Demo](frontend/documentation/demo.gif)
 A comprehensive security monitoring and patrol system with both frontend and backend components.
 
 ## Dahboard View
